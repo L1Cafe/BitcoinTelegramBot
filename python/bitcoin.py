@@ -37,6 +37,9 @@ for currency, currencyProviders in bitcoinCurrentPrice.items():
 for currency, currencyList in bitcoinCurrentPriceList.items():
     bitcoinCurrentAveragePrice[currency] = numpy.average(bitcoinCurrentPriceList[currency])
 
+# Database
+
+
 # Telegram
 ## TOKENS
 telegramToken = os.environ["telegramToken"]         # Bot token
@@ -47,4 +50,3 @@ telegramText = "Currently, 1 #Bitcoin #XBT equals:" + "\n" + "`" + str(bitcoinCu
 ##DELIVERY
 telegramBitcoin = telegramBot(token=telegramToken)
 telegramBitcoin.send_message(chat_id=telegramChatId, text=telegramText, parse_mode=telegramParseMode.MARKDOWN, disable_web_page_preview=True)
-
