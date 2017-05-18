@@ -15,7 +15,7 @@ Set up secrets
 ## Step 2
 Install dependencies
 - If necessary, [install pip](https://pip.pypa.io/en/stable/installing/).
-- Run `pip3 install python-telegram-bot --upgrade --user` from a commandline or [follow the official documentation](https://github.com/python-telegram-bot/python-telegram-bot)
+- Run `pip3 install python-telegram-bot numpy requests --upgrade --user` from a commandline or [follow the official documentation](https://github.com/python-telegram-bot/python-telegram-bot)
 
 ## Step 3
 Test the bot
