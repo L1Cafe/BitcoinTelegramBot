@@ -13,6 +13,7 @@ bitcoinApiEndpoints = \
 {
     "Bitstamp": {"USD": "https://www.bitstamp.net/api/v2/ticker/btcusd/", "EUR": "https://www.bitstamp.net/api/v2/ticker/btceur/"},
     "Blockchain": "https://blockchain.info/ticker",
+    "Coinbase": "https://api.coinbase.com/v2/exchange-rates?currency=BTC",
     "Coindesk": "http://api.coindesk.com/v1/bpi/currentprice.json",
     "Localbitcoins": "https://localbitcoins.net/bitcoinaverage/ticker-all-currencies/"
 }
@@ -21,6 +22,8 @@ bitcoinCurrentPrice["USD"]["Bitstamp"] = requests.get(bitcoinApiEndpoints["Bitst
 bitcoinCurrentPrice["EUR"]["Bitstamp"] = requests.get(bitcoinApiEndpoints["Bitstamp"]["EUR"]).json()["last"]
 bitcoinCurrentPrice["USD"]["Blockchain"] = requests.get(bitcoinApiEndpoints["Blockchain"]).json()["USD"]["last"]
 bitcoinCurrentPrice["EUR"]["Blockchain"] = requests.get(bitcoinApiEndpoints["Blockchain"]).json()["EUR"]["last"]
+bitcoinCurrentPrice["USD"]["Coinbase"] = requests.get(bitcoinApiEndpoints["Coinbase"]).json()["data"]["rates"]["USD"]
+bitcoinCurrentPrice["EUR"]["Coinbase"] = requests.get(bitcoinApiEndpoints["Coinbase"]).json()["data"]["rates"]["EUR"]
 bitcoinCurrentPrice["USD"]["Coindesk"] = requests.get(bitcoinApiEndpoints["Coindesk"]).json()["bpi"]["USD"]["rate"].replace(",", "")
 bitcoinCurrentPrice["EUR"]["Coindesk"] = requests.get(bitcoinApiEndpoints["Coindesk"]).json()["bpi"]["EUR"]["rate"].replace(",", "")
 bitcoinCurrentPrice["USD"]["Localbitcoins"] = requests.get(bitcoinApiEndpoints["Localbitcoins"]).json()["USD"]["avg_1h"]
