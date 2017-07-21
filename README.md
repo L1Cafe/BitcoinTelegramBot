@@ -9,7 +9,7 @@ NOTE: This bot is in active development. Installation instructions may not work 
 Set up secrets
 - Send the `/newbot` command to [BotFather](https://t.me/BotFather) through Telegram and follow the instructions to set up your bot however you want.
 - Copy the HTTP API token into the `launch.bash` file, replacing `<YOUR BOT TOKEN HERE>`.
-- Get the [group chat ID](http://stackoverflow.com/a/32572159) or [user ID](https://stackoverflow.com/questions/31078710/how-to-obtain-telegram-chat-id-for-a-specific-user)
+- Get the [group chat ID](http://stackoverflow.com/a/32572159) or [user ID](https://stackoverflow.com/questions/31078710/how-to-obtain-telegram-chat-id-for-a-specific-user) you want to deliver updated prices to.
 - Copy this ID into the `<YOUR CHAT ID HERE>` field of `launch.bash`. The ID might contain a minus (`-`) sign, that's OK, don't remove it.
 
 ## Step 2
